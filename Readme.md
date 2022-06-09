@@ -1,4 +1,4 @@
-## Projeto Carrinho de Compras
+# Projeto Carrinho de Compras
 
 Este projeto foi realizado como encerramento do bloco 9 de estudos na Trybe, onde foi abordado as funcionalidades do JavaScript assíncrono e utilização de APIs e como podemos utilizar o Jest para realizar testes neste cenário.
 
