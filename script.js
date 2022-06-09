@@ -28,6 +28,8 @@ const createProductItemElement = ({ sku, name, image }) => {
 
 const getSkuFromProductItem = (item) => item.querySelector('span.item__sku').innerText;
 
+const createStorageTotal = () => localStorage.setItem('cartTotal', JSON.stringify(0));
+
 const showTotal = () => {
   const sectionTotal = document.getElementsByClassName('total-price')[0];
   sectionTotal.innerText = `Subtotal: R$ ${localStorage.getItem('cartTotal')}`;
@@ -105,11 +107,13 @@ const emptyCart = () => {
   buttonClearCart.addEventListener('click', () => {
     localStorage.clear();
     Array.from(li).forEach((item) => item.parentNode.removeChild(item));
+    createStorageTotal();
     showTotal();
   });
 };
 
 window.onload = () => {
+  createStorageTotal();
   createHtml();
   reloadCart();
   emptyCart();
