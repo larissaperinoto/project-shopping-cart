@@ -87,7 +87,7 @@ const reloadCart = () => {
 };
 
 const removeReloadParagraph = () => {
-  const reload = document.getElementsByClassName('loading')[0];
+  const reload = document.getElementsByClassName('loading-img')[0];
   reload.parentNode.removeChild(reload);
 };
 
