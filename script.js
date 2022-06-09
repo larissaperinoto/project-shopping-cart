@@ -112,10 +112,26 @@ const emptyCart = () => {
   });
 };
 
+const showCart = () => {
+  const cartIcon = document.getElementsByClassName('material-icons')[0];
+  const cartSection = document.getElementsByClassName('cart')[0];
+  cartIcon.addEventListener('click', () => {
+
+    if(cartSection.id === 'hide') {
+      cartSection.id = '';
+    } else {
+      cartSection.id = 'hide';
+    }
+
+    console.log()
+  });
+}
+
 window.onload = () => {
   createStorageTotal();
   createHtml();
   reloadCart();
   emptyCart();
   showTotal();
+  showCart();
 };
