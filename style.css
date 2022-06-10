@@ -115,11 +115,16 @@ body {
   border: 0;
   border-radius: 10px;
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 5px;
   color: white;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 14 px;
   box-shadow: 0px 1px 1px black;
+}
+
+.item .item__add:hover {
+  background-color: rgb(66, 91, 183);
+  border: 1px solid white;
 }
 
 .cart {
@@ -137,7 +142,7 @@ body {
   animation-duration: 1s;
 }
 
-.cart__item{
+.cart .cart__item{
   display: flex;
   margin: 20px;
   padding: 15px 15px;
@@ -146,6 +151,11 @@ body {
   font-size: 17px;
   box-shadow: 0px 1px 1px black;
   cursor: pointer;
+}
+
+.cart .cart__item:hover {
+  margin: 19px;
+  background-color: rgb(243, 243, 243);
 }
 
 .cart__item img {
@@ -171,6 +181,10 @@ body {
   border-radius: 8px;
   box-shadow: 0px 1px 1px black;
   font-weight: bold;
+}
+
+.empty-cart:hover {
+  border: 1px solid black;
 }
 
 @keyframes adicionaCarrinho  {
