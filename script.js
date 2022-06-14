@@ -1,4 +1,4 @@
-const ol = document.getElementsByClassName('cart__items')[0];
+const ol = document.querySelector('.cart__items');
 
 const createProductImageElement = (imageSource) => {
   const img = document.createElement('img');
@@ -31,7 +31,7 @@ const getSkuFromProductItem = (item) => item.querySelector('span.item__sku').inn
 const createStorageTotal = () => localStorage.setItem('cartTotal', JSON.stringify(0));
 
 const showTotal = () => {
-  const sectionTotal = document.getElementsByClassName('total-price')[0];
+  const sectionTotal = document.querySelector('.total-price');
   sectionTotal.innerText = `Subtotal: R$ ${localStorage.getItem('cartTotal')}`;
 };
 
@@ -50,10 +50,10 @@ const sumTotal = (price) => {
 };
 
 const cartItemClickListener = (event) => {
-  event.target.parentNode.removeChild(event.target);
+    event.currentTarget.remove(event)
   saveCartItems(ol.innerHTML);
-  const price = parseFloat(event.target.innerText.split(' ').pop().split('').slice(1)
-  .join(''));
+  const price = parseFloat(event.currentTarget.innerText.split(' ').pop().split('').slice(1)
+    .join(''));
   subtractTotal(price);
 };
 
@@ -71,11 +71,11 @@ const createCartItemElement = ({ sku, name, salePrice, image }) => {
 };
 
 const createCart = () => {
-  const buttonAdd = document.getElementsByClassName('item__add');
-  Array.from(buttonAdd).forEach((button) => button.addEventListener('click', async () => {
+  const buttonAdd = document.querySelectorAll('.item__add');
+  buttonAdd.forEach((button) => button.addEventListener('click', async () => {
     const idItem = button.parentNode.querySelector('.item__sku').innerText;
     const { id, title, price, thumbnail } = await fetchItem(idItem);
-    ol.appendChild(createCartItemElement({ sku: id, name: title, salePrice: price, image:thumbnail }));
+    ol.appendChild(createCartItemElement({ sku: id, name: title, salePrice: price, image: thumbnail }));
     saveCartItems(ol.innerHTML);
     sumTotal(price);
   }));
@@ -103,27 +103,25 @@ const createHtml = async () => {
 
 const emptyCart = () => {
   const buttonClearCart = document.getElementsByClassName('empty-cart')[0];
-  const li = document.getElementsByClassName('cart__item');
+  const li = document.querySelectorAll('.cart__item');
   buttonClearCart.addEventListener('click', () => {
     localStorage.clear();
-    Array.from(li).forEach((item) => item.parentNode.removeChild(item));
+    li.forEach((item) => item.parentNode.removeChild(item));
     createStorageTotal();
     showTotal();
   });
 };
 
 const showCart = () => {
-  const cartIcon = document.getElementsByClassName('material-icons')[0];
-  const cartSection = document.getElementsByClassName('cart')[0];
+  const cartIcon = document.querySelector('.material-icons');
+  const cartSection = document.querySelector('.cart');
   cartIcon.addEventListener('click', () => {
 
-    if(cartSection.id === 'hide') {
+    if (cartSection.id === 'hide') {
       cartSection.id = '';
     } else {
       cartSection.id = 'hide';
     }
-
-    console.log()
   });
 }
 
