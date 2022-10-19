@@ -8,7 +8,16 @@ A aplicação consistem em um carrinho de compras dinâmico que utiliza dados de
 
 ### Tecnologia e Ferramentas
 
-Neste projeto foi possível exercitar as habilidades de utilização da função _fetch_ para consumir dados de uma API e também foi tabalhado o conceito de JavaScript síncrono e assíncrono. Outra habilidade importânte trabalhada no projeto foi o _Desenvolvimento orientado a testes_ onde utilizou-se o framework [Jest](https://jestjs.io/pt-BR/docs/expect). Foi utilizado a ferramenta [ESLint](https://github.com/eslint/eslint) para identificar e reportar padrões encontrados no código ECMAScript/JavaScript.
+<div>
+    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="html" />
+    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="css" />
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="javascript" />
+    <img src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white" alt="jest" />
+</div>
+
+<br>
+
+Neste projeto foi possível exercitar as habilidades de utilização da função _fetch_ para consumir dados de uma API e também foi tabalhado o conceito de JavaScript síncrono e assíncrono. Outra habilidade trabalhada no projeto foi o _Desenvolvimento orientado a testes_ onde utilizou-se o framework [Jest](https://jestjs.io/pt-BR/docs/expect). Foi utilizado a ferramenta [ESLint](https://github.com/eslint/eslint) para identificar e reportar padrões encontrados no código ECMAScript/JavaScript.
 
 ### Execução
 
@@ -35,3 +44,9 @@ Para executar e verificar a cobertura de testes, rode o comando abaixo:
 Acesse a aplicação [aqui](https://larissaperinoto.github.io/project-shopping-cart/).
 
 ![Captura de tela de 2022-10-16 20-16-36](https://user-images.githubusercontent.com/98956659/196063489-8f393979-36a6-4bfe-8965-9589f0007fd4.png)
+
+
+---
+ 
+Desenvolvido por [Larissa Perinoto](www.linkedin.com/in/larissaperinoto), © 2022.
+
